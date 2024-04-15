@@ -1,12 +1,11 @@
 import 'package:cashinout/Customer/loginscreen.dart';
 import 'package:cashinout/CashBook/update.dart';
-import 'package:cashinout/changenotifier.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
+
 import 'Cashbook report.dart';
-import 'cashbook.dart';
+
 import 'AddAmount.dart';
 import '../HiveDatabase/data_box.dart';
 import '../HiveDatabase/data_record.dart';
@@ -45,72 +44,73 @@ class _CashBookScreenState extends State<CashBookScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100,
-        automaticallyImplyLeading: false,
-        title: Consumer<CounterModel>(builder: (context, counterModel, child) {
-          return InkWell(
-            onTap: () {
-              // counterModel.addnew();
-            },
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'CashBook',
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            SizedBox(
-                              width: 110,
-                            ),
-                            InkWell(
-                              onTap: () {},
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.backup_outlined,
-                                    size: 20,
-                                    color: Colors.red,
-                                  ),
-                                  SizedBox(height: 2),
-                                  Text(
-                                    'Backup',
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 100,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "My business",
-                          style: TextStyle(fontSize: 17),
-                        ),
-                        Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 17,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ],
-            ),
-          );
-        }),
-      ),
+      // appBar: AppBar(
+      //   toolbarHeight: 100,
+      //   automaticallyImplyLeading: false,
+      //   title:
+      //   Consumer<CounterModel>(builder: (context, counterModel, child) {
+      //     return InkWell(
+      //       onTap: () {
+      //         // counterModel.addnew();
+      //       },
+      //       child: Column(
+      //         children: [
+      //           Column(
+      //             children: [
+      //               Row(
+      //                 children: [
+      //                   Row(
+      //                     children: [
+      //                       Text(
+      //                         'CashBook',
+      //                         style: TextStyle(fontSize: 20),
+      //                       ),
+      //                       SizedBox(
+      //                         width: 110,
+      //                       ),
+      //                       InkWell(
+      //                         onTap: () {},
+      //                         child: Column(
+      //                           children: [
+      //                             Icon(
+      //                               Icons.backup_outlined,
+      //                               size: 20,
+      //                               color: Colors.red,
+      //                             ),
+      //                             SizedBox(height: 2),
+      //                             Text(
+      //                               'Backup',
+      //                               style: TextStyle(fontSize: 15),
+      //                             ),
+      //                           ],
+      //                         ),
+      //                       ),
+      //                     ],
+      //                   ),
+      //                   SizedBox(
+      //                     width: 100,
+      //                   ),
+      //                 ],
+      //               ),
+      //               Row(
+      //                 children: [
+      //                   Text(
+      //                     "My business",
+      //                     style: TextStyle(fontSize: 17),
+      //                   ),
+      //                   Icon(
+      //                     Icons.keyboard_arrow_down,
+      //                     size: 17,
+      //                   ),
+      //                 ],
+      //               )
+      //             ],
+      //           ),
+      //         ],
+      //       ),
+      //     );
+      //   }),
+      // ),
       body: Column(children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.start,

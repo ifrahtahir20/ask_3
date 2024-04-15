@@ -1,12 +1,11 @@
-import 'package:cashinout/CashBook/cashbook.dart';
 import 'package:cashinout/Customer/loginscreen.dart';
 import "package:flutter/material.dart";
+
 import 'package:provider/provider.dart';
-import 'CashBook/AfterAmount.dart';
 import 'Customer/afterrecord.dart';
 import 'HiveDatabase/data_box.dart';
 import 'HiveDatabase/data_record.dart';
-import 'changenotifier.dart';
+import 'ThemeProvider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
